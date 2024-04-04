@@ -40,19 +40,18 @@ public class Musica {
         return album;
     }
 
-    public void darPlay() {
-    }
-
-    public String pausar() {
-
-    }
-
-    public void avancarMusica() {
-    }
-
-    public void trocarMusica() {
-    }
-
-    public void colocarEmLoop() {
-    }
+//    public void darPlay() {
+//    }
+//
+//    public String pausar() {
+//    }
+//
+//    public void avancarMusica() {
+//    }
+//
+//    public void trocarMusica() {
+//    }
+//
+//    public void colocarEmLoop() {
+//    }
 }
