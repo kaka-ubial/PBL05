@@ -4,13 +4,13 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main {
-
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         String opcao;
         ArrayList<Usuario> usuarios = new ArrayList<>();
         ArrayList<Playlist> playlists = new ArrayList<>();
-
         ArrayList<Musica> musicas = new ArrayList<>();
+        
         Musica musica1 = new Musica("Carry on Wayward Son", "Kansas", 4.15f, "20-10-1998", "K");
         musicas.add(musica1);
         Musica musica2 = new Musica("Bohemian Rhapsody", "Queen", 5.55f, "31-10-1975", "A Night at the Opera");
@@ -77,6 +77,7 @@ public class Main {
                     break;
             }
          } while (opcao != "4");
-        }
-    }
+}
+
+}
 
