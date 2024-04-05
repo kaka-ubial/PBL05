@@ -77,9 +77,10 @@ public class Main {
                                 System.out.println("Duração: " + musica.getTempo());
                                 System.out.println("Data de lançamento: " + musica.getDataDeLancamento());
                                 System.out.println("Álbum: " + musica.getAlbum());
-                                System.out.println("-------------------------------");
+                                System.out.println("------------------------------------------");
                             }
                             System.out.println("Música adicionada à playlist com sucesso!");
+                            System.out.println("------------------------------------------");
                             System.out.println();
                         }
                     }
