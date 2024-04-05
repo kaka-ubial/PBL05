@@ -1,19 +1,30 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Playlist {
     private String nome;
     private String capa;
     private int numMusica;
     private int numCurtidas;
     private int horasDeMusica;
+    private ArrayList<Musica> musicas;
+
 
     public Playlist() {
-        this("Treinin", "Capa do treinin", 290, 102, 20);
+        this("Treinin", "Capa do treinin", 290, 102, 20, new ArrayList<>());
     }
-    public Playlist (String nome, String capa, int numMusica, int numCurtidas, int horasDeMusica) {
+    
+    public Playlist(String nome, String capa, int numMusica, int numCurtidas, int horasDeMusica, ArrayList<Musica> musicas) {
         this.nome = nome;
         this.capa = capa;
         this.numMusica = numMusica;
         this.numCurtidas = numCurtidas;
         this.horasDeMusica = horasDeMusica;
+        if (musicas == null) {
+            this.musicas = new ArrayList<>();
+        } else {
+            this.musicas = musicas;
+        }
     }
 
     public String getNome() {
@@ -56,19 +67,25 @@ public class Playlist {
         this.horasDeMusica = horasDeMusica;
     }
 
-    public void addMusica() {
-
+    public ArrayList<Musica> getMusicas() {
+        return musicas;
     }
 
-    public void delMusica() {
-
+    public void setMusicas(ArrayList<Musica> musicas) {
+        this.musicas = musicas;
     }
 
-    public void compartilharPlaylist() {
+    public static Playlist criarPlaylist() {
+        Scanner scanData = new Scanner(System.in);
+        System.out.println("Qual será o nome da playlist?");
+        String nome = scanData.nextLine();
 
+        return new Playlist(nome, null, 0, 0, 0, null);
     }
 
-    public void tornarPublica() {
-
+    public void addMusica(Musica musica) {
+        this.musicas.add(musica);
+        this.numMusica++;
     }
+
 }

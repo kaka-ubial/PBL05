@@ -8,6 +8,7 @@ public class Musica {
     public Musica() {
         this("Carry on Wayward Son", "Kansas", 4.15f, "20-10-1998", "K");
     }
+    
     public Musica (String nome, String artista, float tempo, String dataDeLancamento, String album) {
         this.nome = nome;
         this.artista = artista;
@@ -40,18 +41,19 @@ public class Musica {
         return album;
     }
 
-//    public void darPlay() {
-//    }
-//
-//    public String pausar() {
-//    }
-//
-//    public void avancarMusica() {
-//    }
-//
-//    public void trocarMusica() {
-//    }
-//
-//    public void colocarEmLoop() {
-//    }
+    public void darPlay() {
+    }
+
+    public void pausar() {
+
+    }
+
+    public void avancarMusica() {
+    }
+
+    public void trocarMusica() {
+    }
+
+    public void colocarEmLoop() {
+    }
 }

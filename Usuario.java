@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Usuario {
 
     protected String nome;
@@ -5,7 +8,6 @@ public class Usuario {
     protected String senha;
     protected String foto;
     protected int numeroSeguidores;
-
     protected String playlist;
 
     public Usuario(String nome, String email, String senha, String foto, int numeroSeguidores, String playlist) {
@@ -63,5 +65,17 @@ public class Usuario {
 
     public void setPlaylist(String playlist) {
         this.playlist = playlist;
+    }
+
+    public static Usuario cadastrar() {
+        Scanner scanData = new Scanner(System.in);
+        System.out.println("Digite seu nome: ");
+        String nome = scanData.nextLine();
+        System.out.println("Digite seu email: ");
+        String email = scanData.nextLine();
+        System.out.println("Digite sua senha: ");
+        String senha = scanData.nextLine();
+        
+        return new Usuario(nome, email, senha, null, 0, null);
     }
 }
