@@ -31,4 +31,8 @@ public class Artista extends Usuario {
     public void addMerchandise() {
 
     }
+
+    public String cadastroRetorno() {
+        return "Cadastro de Artista concluído com sucesso!";
+    }
 }

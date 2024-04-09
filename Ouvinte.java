@@ -39,4 +39,8 @@ public class Ouvinte extends Usuario {
     public void controlarvolume(){
 
     }
+
+    public String cadastroRetorno() {
+        return "Cadastro de Ouvinte concluído com sucesso!";
+    }
 }

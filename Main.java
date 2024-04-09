@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         String opcao;
-        ArrayList<Usuario> usuarios = new ArrayList<>();
+        ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
         ArrayList<Playlist> playlists = new ArrayList<>();
         ArrayList<Musica> musicas = new ArrayList<>();
         boolean usuarioCadastrado = false; 
@@ -29,10 +29,9 @@ public class Main {
                         System.out.println("Você já está cadastrado como usuário.");
                         break;
                     } 
-                    Usuario novoUsuario = Usuario.cadastrar();
-                    usuarios.add(novoUsuario);   
-                    System.out.println("Usuário cadastrado com sucesso!");
-                    usuarioCadastrado = true; 
+                    System.out.println("Você deseja se cadastrar como Ouvinte ou Artista?\n1 - Ouvinte\n2 - Artista");
+                    String x = scanner.nextLine();
+                    Usuario novoOuvinte = Usuario.cadastrar(Ouvinte);
                     break;
                 case "2":
                 if (usuarios.isEmpty()) {

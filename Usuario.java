@@ -67,15 +67,40 @@ public class Usuario {
         this.playlist = playlist;
     }
 
-    public static Usuario cadastrar() {
-        Scanner scanData = new Scanner(System.in);
-        System.out.println("Digite seu nome: ");
-        String nome = scanData.nextLine();
-        System.out.println("Digite seu email: ");
-        String email = scanData.nextLine();
-        System.out.println("Digite sua senha: ");
-        String senha = scanData.nextLine();
-        
-        return new Usuario(nome, email, senha, null, 0, null);
+    public static Usuario cadastrar(String x) {
+        switch(x) {
+            case "1":
+                Scanner scanData = new Scanner(System.in);
+                System.out.println("Digite seu nome: ");
+                String nome = scanData.nextLine();
+                System.out.println("Digite seu email: ");
+                String email = scanData.nextLine();
+                System.out.println("Digite sua senha: ");
+                String senha = scanData.nextLine();
+                System.out.println("Digite seu telefone: ");
+                String telefone = scanData.nextLong();
+                scanData.nextLine();
+                return new Ouvinte(nome, email, senha, null, 0, null, telefone, null);
+                break;
+            case "2":
+                System.out.println("Digite seu nome: ");
+                String nomeArtista = scanData.nextLine();
+                System.out.println("Digite seu email: ");
+                String emailArtista = scanData.nextLine();
+                System.out.println("Digite sua senha: ");
+                String senhaArtista = scanData.nextLine();
+                return new Artista(nomeArtista, emailArtista, senhaArtista, null, 0, null, null, 0, null, null);
+                break;
+            default:
+                break;
+        }        
+    }
+    
+    public String cadastroRetorno() {
+        return "Cadastro concluído com sucesso!";
+    }
+
+    public void retorno(Usuario x) {
+        x.cadastroRetorno();
     }
 }
