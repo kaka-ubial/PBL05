@@ -31,7 +31,7 @@ public class Main {
                     } 
                     System.out.println("Você deseja se cadastrar como Ouvinte ou Artista?\n1 - Ouvinte\n2 - Artista");
                     String x = scanner.nextLine();
-                    Usuario novoOuvinte = Usuario.cadastrar(Ouvinte);
+                    usuarios.add(Usuario.cadastrar(x));
                     break;
                 case "2":
                 if (usuarios.isEmpty()) {

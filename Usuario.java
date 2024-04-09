@@ -68,31 +68,23 @@ public class Usuario {
     }
 
     public static Usuario cadastrar(String x) {
+        Scanner scanData = new Scanner(System.in);
+        System.out.println("Digite seu nome: ");
+        String nome = scanData.nextLine();
+        System.out.println("Digite seu email: ");
+        String email = scanData.nextLine();
+        System.out.println("Digite sua senha: ");
+        String senha = scanData.nextLine();
         switch(x) {
             case "1":
-                Scanner scanData = new Scanner(System.in);
-                System.out.println("Digite seu nome: ");
-                String nome = scanData.nextLine();
-                System.out.println("Digite seu email: ");
-                String email = scanData.nextLine();
-                System.out.println("Digite sua senha: ");
-                String senha = scanData.nextLine();
                 System.out.println("Digite seu telefone: ");
-                String telefone = scanData.nextLong();
+                Long telefone = scanData.nextLong();
                 scanData.nextLine();
                 return new Ouvinte(nome, email, senha, null, 0, null, telefone, null);
-                break;
             case "2":
-                System.out.println("Digite seu nome: ");
-                String nomeArtista = scanData.nextLine();
-                System.out.println("Digite seu email: ");
-                String emailArtista = scanData.nextLine();
-                System.out.println("Digite sua senha: ");
-                String senhaArtista = scanData.nextLine();
-                return new Artista(nomeArtista, emailArtista, senhaArtista, null, 0, null, null, 0, null, null);
-                break;
+                return new Artista(nome, email, senha, null, 0, null, null, 0, null, null);
             default:
-                break;
+                return new Usuario(nome, email, senha, null, 0, null);
         }        
     }
     
