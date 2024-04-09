@@ -92,7 +92,7 @@ public class Usuario {
         return "Cadastro concluído com sucesso!";
     }
 
-    // public void retorno(Usuario x) {
-    //     x.cadastroRetorno();
-    // }
+    public void retorno() {
+        System.out.println(cadastroRetorno());
+    }
 }
