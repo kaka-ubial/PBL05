@@ -34,6 +34,7 @@ public class Main {
                     Usuario usuarioCad = Usuario.cadastrar(x);
                     usuarios.add(usuarioCad);
                     usuarioCad.retorno();
+                    usuarioCadastrado = true;
                     System.out.println("-------------------------------");
                     break;
                 case "2":
